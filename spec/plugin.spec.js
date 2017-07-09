@@ -62,7 +62,7 @@ function webpackCompile(webpackOpts, opts, cb) {
   var fs = compiler.outputFileSystem = new MemoryFileSystem();
 
   compiler.run(function(err, stats){
-    var manifestFile = JSON.parse( fs.readFileSync(manifestPath).toString() );
+    var manifestFile = JSON.parse(fs.readFileSync(manifestPath).toString());
 
     expect(err).toBeFalsy();
     expect(stats.hasErrors()).toBe(false);
